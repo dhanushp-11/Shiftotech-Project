@@ -1,6 +1,6 @@
 resource "aws_instance" "jenkins" {
     ami = ""
-    instance_type = "t2.medium"
+    instance_type = "t3.micro"
     key_name = aws_key_pair.key.key_name
     subnet_id = var.public_sub_1
     vpc_security_group_ids = [var.jenkins_sg]
@@ -16,7 +16,7 @@ resource "aws_instance" "jenkins" {
 
 resource "aws_instance" "docker" {
     ami = ""
-    instance_type = "t2.medium"
+    instance_type = "t3.micro"
     key_name = aws_key_pair.key.key_name
     subnet_id = var.private_sub_1
     vpc_security_group_ids = [var.docker_sg]
