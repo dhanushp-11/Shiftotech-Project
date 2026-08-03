@@ -52,7 +52,7 @@ pipeline {
                     steps {
                         sh '''
                           echo "Deployment Update Initiated"
-                          kubectl set image deployment frontend-deployment frontend=pritam44/coding-cloud-frontend:${BUILD_NUMBER} -n coding-cloud
+                          kubectl set image deployment frontend-deployment frontend=dhanum11/coding-cloud-frontend:${BUILD_NUMBER} -n coding-cloud
                           echo "Deployment Update Completed"
                         '''
                     }
